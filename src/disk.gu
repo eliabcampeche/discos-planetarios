@@ -1,0 +1,15 @@
+reset
+set encoding utf8
+set term postscript eps enhanced color solid
+set output 'discopruebas.eps'
+set xrange[0.01:40]
+set yrange[1e-4:1000]
+set logscale x
+set logscale y
+set title 'Evolución viscosa de la densidad superficial normalizada'
+set xlabel 'r (R_1)'
+set ylabel '{/Symbol s}   ({/Symbol S} (R_1,T=0))'
+set grid
+plot 'fort.10'  using 1:2 t 'Intervalos de 1.2 My' with lines
+
+exit
